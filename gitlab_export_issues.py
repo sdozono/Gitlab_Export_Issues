@@ -21,9 +21,9 @@ def build_csv_issue(filename, one_issue):
 
     # Extract iid, title, and description
     iid = one_issue.attributes['iid']
-    if (ISSUE_NUM_BIGGER_THAN is not None) and (ISSUE_NUM_BIGGER_THAN > iid):
+    if (ISSUE_NO_BIGGER_THAN is not None) and (ISSUE_NO_BIGGER_THAN > iid):
         return;
-    if (ISSUE_NUM_LESS_THAN is not None) and (ISSUE_NUM_LESS_THAN < iid):
+    if (ISSUE_NO_LESS_THAN is not None) and (ISSUE_NO_LESS_THAN < iid):
         return;
 
     title = one_issue.attributes['title']
