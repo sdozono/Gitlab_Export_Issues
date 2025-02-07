@@ -1,15 +1,13 @@
 #
-# Gitlab Issue Export 2025/2/7 SD
-#
-#
+# Gitlab Issues Export 2025/2/7
 # pip install python-gitlab 
 #
 ##################
 GITLAB_DOMAIN = "" #your Gitlab domain
 GITLAB_AUTH_TOKEN = '' # https://YOUR_GITLAB/-/user_settings/personal_access_tokens
 PROJETCT_ID =  # Project ID
-ISSUE_NUM_BIGGER_THAN = None
-ISSUE_NUM_LESS_THAN = None
+ISSUE_NO_BIGGER_THAN = None
+ISSUE_NO_LESS_THAN = None
 ##################
 """Example script for showing example usage of python-gitlab package."""
 import csv
