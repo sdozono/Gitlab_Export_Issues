@@ -6,8 +6,8 @@
 GITLAB_DOMAIN = "" #your Gitlab domain
 GITLAB_AUTH_TOKEN = '' # https://YOUR_GITLAB/-/user_settings/personal_access_tokens
 PROJETCT_ID =  # Project ID
-ISSUE_NO_BIGGER_THAN = None
-ISSUE_NO_LESS_THAN = None
+ISSUE_NUMBER_BIGGER_THAN = None
+ISSUE_NUMBER_LESS_THAN = None
 ##################
 """Example script for showing example usage of python-gitlab package."""
 import csv
@@ -21,9 +21,9 @@ def build_csv_issue(filename, one_issue):
 
     # Extract iid, title, and description
     iid = one_issue.attributes['iid']
-    if (ISSUE_NO_BIGGER_THAN is not None) and (ISSUE_NO_BIGGER_THAN > iid):
+    if (ISSUE_NUMBER_BIGGER_THAN is not None) and (ISSUE_NUMBER_BIGGER_THAN > iid):
         return;
-    if (ISSUE_NO_LESS_THAN is not None) and (ISSUE_NO_LESS_THAN < iid):
+    if (ISSUE_NUMBER_LESS_THAN is not None) and (ISSUE_NUMBER_LESS_THAN < iid):
         return;
 
     title = one_issue.attributes['title']
